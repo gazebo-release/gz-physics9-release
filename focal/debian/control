@@ -21,7 +21,7 @@ Build-Depends: cmake,
                libdart6-external-odelcpsolver-dev (<< 6.10.0) | libdart-external-odelcpsolver-dev (>> 6.9.0),
                libdart6-utils-dev (<< 6.10.0) | libdart-utils-dev (>> 6.9.0),
                libdart6-utils-urdf-dev (<< 6.10.0) | libdart-utils-urdf-dev (>> 6.9.0),
-               libsdformat11-dev
+               libsdformat12-dev
 Vcs-Browser: https://github.com/ignition-release/ign-physics5-release
 Vcs-Git: https://github.com/ignition-release/ign-physics5-release
 Homepage: http://ignitionrobotics.org/
@@ -47,7 +47,7 @@ Architecture: any
 Section: libdevel
 Depends: libignition-physics5-core-dev,
          libignition-cmake2-dev (>= 2.1.0),
-         libsdformat11-dev,
+         libsdformat12-dev,
          libignition-physics5 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
@@ -104,7 +104,7 @@ Depends: libignition-physics5-core-dev,
          libdart6-external-odelcpsolver-dev (<< 6.10.0) | libdart-external-odelcpsolver-dev (>> 6.9.0),
          libdart6-external-ikfast-dev (<< 6.10.0) | libdart-external-ikfast-dev (>> 6.9.0),
          libdart6-collision-bullet-dev (<< 6.10.0) | libdart-collision-bullet-dev (>> 6.9.0),
-         libsdformat11-dev,
+         libsdformat12-dev,
          libignition-physics5-dartsim (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
@@ -136,7 +136,7 @@ Depends: libignition-physics5-core-dev,
          libignition-math6-dev,
          libignition-math6-eigen3-dev,
          libignition-plugin-dev (>= 1.1.0),
-         libsdformat11-dev,
+         libsdformat12-dev,
          libignition-physics5-tpe (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
