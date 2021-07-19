@@ -6,6 +6,7 @@ Priority: optional
 Build-Depends: cmake,
                pkg-config,
                debhelper (>= 9),
+               libbullet-dev,
                libignition-cmake2-dev (>= 2.1.0),
                libignition-common4-graphics-dev,
                libignition-common4-profiler-dev,
@@ -46,7 +47,7 @@ Description: Ignition Physics classes and functions for robot apps - Development
 Package: libignition-physics5-sdf-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics5-core-dev,
+Depends: libignition-physics5-core-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
          libsdformat12-dev,
          libignition-physics5 (= ${binary:Version}),
@@ -61,7 +62,7 @@ Description: Ignition Physics classes and functions for robot apps - SDF Dev fil
 Package: libignition-physics5-mesh-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics5-core-dev,
+Depends: libignition-physics5-core-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
          libignition-common4-graphics-dev,
          libignition-physics5 (= ${binary:Version}),
@@ -72,6 +73,21 @@ Description: Ignition Physics classes and functions for robot apps - Mesh Dev fi
   designed to rapidly develop robot applications.
   .
   Mesh component, development files
+
+Package: libignition-physics5-heightmap-dev
+Architecture: any
+Section: libdevel
+Depends: libignition-physics5-core-dev (= ${binary:Version}),
+         libignition-cmake2-dev (>= 2.1.0),
+         libignition-common4-graphics-dev,
+         libignition-physics5 (= ${binary:Version}),
+         ${misc:Depends}
+Multi-Arch: same
+Description: Ignition Physics classes and functions for robot apps - Heightmap Dev files
+  Ignition Physics is a component in the ignition framework, a set of libraries
+  designed to rapidly develop robot applications.
+  .
+  Heightmap component, development files
 
 Package: libignition-physics5
 Architecture: any
@@ -88,9 +104,10 @@ Description: Ignition Physics classes and functions for robot apps - Shared libr
 Package: libignition-physics5-dartsim-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics5-core-dev,
-         libignition-physics5-sdf-dev,
-         libignition-physics5-mesh-dev,
+Depends: libignition-physics5-core-dev (= ${binary:Version}),
+         libignition-physics5-sdf-dev (= ${binary:Version}),
+         libignition-physics5-mesh-dev (= ${binary:Version}),
+         libignition-physics5-heightmap-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
          libignition-common4-graphics-dev,
          libignition-math6-dev,
@@ -128,9 +145,9 @@ Description: Ignition Physics classes and functions for robot apps - Dartsim lib
 Package: libignition-physics5-tpe-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics5-core-dev,
-         libignition-physics5-sdf-dev,
-         libignition-physics5-mesh-dev,
+Depends: libignition-physics5-core-dev (= ${binary:Version}),
+         libignition-physics5-sdf-dev (= ${binary:Version}),
+         libignition-physics5-mesh-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
          libignition-math6-dev,
          libignition-math6-eigen3-dev,
@@ -185,15 +202,50 @@ Description: Ignition Physics classes and functions for robot apps - TPE library
   .
   TPE library component shared library
 
+Package: libignition-physics5-bullet-dev
+Architecture: any
+Section: libdevel
+Depends: libignition-physics5-core-dev (= ${binary:Version}),
+         libignition-physics5-sdf-dev (= ${binary:Version}),
+         libignition-physics5-mesh-dev (= ${binary:Version}),
+         libignition-cmake2-dev (>= 2.1.0),
+         libignition-common4-graphics-dev,
+         libignition-math6-dev,
+         libignition-plugin-dev (>= 1.1.0),
+         libbullet-dev,
+         libsdformat11-dev,
+         libignition-physics5-bullet (= ${binary:Version}),
+         ${misc:Depends}
+Multi-Arch: same
+Description: Ignition Physics classes and functions for robot apps - Development files
+  Ignition Physics is a component in the ignition framework, a set of libraries
+  designed to rapidly develop robot applications.
+  .
+  Bullet component, development files
+
+Package: libignition-physics5-bullet
+Architecture: any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Multi-Arch: same
+Description: Ignition Physics classes and functions for robot apps - Bullet engine
+  Ignition Physics is a component in the ignition framework, a set of libraries
+  designed to rapidly develop robot applications.
+  .
+  Bullet component shared library
+
 Package: libignition-physics5-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics5-core-dev,
-         libignition-physics5-dartsim-dev,
-         libignition-physics5-mesh-dev,
-         libignition-physics5-sdf-dev,
-         libignition-physics5-tpe-dev,
-         libignition-physics5-tpelib-dev,
+Depends: libignition-physics5-core-dev (= ${binary:Version}),
+         libignition-physics5-bullet-dev (= ${binary:Version}),
+         libignition-physics5-dartsim-dev (= ${binary:Version}),
+         libignition-physics5-heightmap-dev (= ${binary:Version}),
+         libignition-physics5-mesh-dev (= ${binary:Version}),
+         libignition-physics5-sdf-dev (= ${binary:Version}),
+         libignition-physics5-tpe-dev (= ${binary:Version}),
+         libignition-physics5-tpelib-dev (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Ignition Physics classes and functions for robot apps - Metapackage
