@@ -1,18 +1,6 @@
-ignition-physics5 (5.0.0-1~sid) sid; urgency=medium
-
-  * ignition-physics5 5.0.0-1 release
-
- -- Addisu Z. Taddese <addisu@openrobotics.org>  Thu, 30 Sep 2021 21:04:47 -0500
-
-ignition-physics5 (5.0.0~pre1-1~sid) sid; urgency=medium
-
-  * ignition-physics5 5.0.0~pre1-1 release
-
- -- Addisu Z. Taddese <addisu@openrobotics.org>  Tue, 21 Sep 2021 12:03:15 -0500
-
-ignition-physics5 (4.999.999-1~sid) sid; urgency=medium
+ignition-physics6 (5.999.999-1~sid) sid; urgency=medium
 
   * Stub to be removed after first entry
 
- -- Louise Poubel <louise@openrobotics.org>  Thu, 01 Apr 2021 15:26:33 -0700
+ -- Louise Poubel <louise@openrobotics.org>  Thu, 07 Oct 2021 15:43:21 -0700
 

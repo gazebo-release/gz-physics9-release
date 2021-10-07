@@ -1,4 +1,4 @@
-Source: ignition-physics5
+Source: ignition-physics6
 Standards-Version: 3.9.8
 Maintainer: Jose Luis Rivero <jrivero@osrfoundation.org>
 Section: science
@@ -23,17 +23,17 @@ Build-Depends: cmake,
                libdart6-utils-dev (<< 6.10.0) | libdart-utils-dev (>> 6.9.0),
                libdart6-utils-urdf-dev (<< 6.10.0) | libdart-utils-urdf-dev (>> 6.9.0),
                libsdformat12-dev
-Vcs-Browser: https://github.com/ignition-release/ign-physics5-release
-Vcs-Git: https://github.com/ignition-release/ign-physics5-release
+Vcs-Browser: https://github.com/ignition-release/ign-physics6-release
+Vcs-Git: https://github.com/ignition-release/ign-physics6-release
 Homepage: http://ignitionrobotics.org/
 
-Package: libignition-physics5-core-dev
+Package: libignition-physics6-core-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-cmake2-dev (>= 2.1.0),
          libignition-math6-dev,
          libignition-plugin-dev,
-         libignition-physics5 (= ${binary:Version}),
+         libignition-physics6 (= ${binary:Version}),
          libignition-utils1-dev,
          ${misc:Depends}
 Multi-Arch: same
@@ -43,13 +43,13 @@ Description: Ignition Physics classes and functions for robot apps - Development
   .
   Core component, development files
 
-Package: libignition-physics5-sdf-dev
+Package: libignition-physics6-sdf-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics5-core-dev (= ${binary:Version}),
+Depends: libignition-physics6-core-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
          libsdformat12-dev,
-         libignition-physics5 (= ${binary:Version}),
+         libignition-physics6 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Ignition Physics classes and functions for robot apps - SDF Dev files
@@ -58,13 +58,13 @@ Description: Ignition Physics classes and functions for robot apps - SDF Dev fil
   .
   SDF component, development files
 
-Package: libignition-physics5-mesh-dev
+Package: libignition-physics6-mesh-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics5-core-dev (= ${binary:Version}),
+Depends: libignition-physics6-core-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
          libignition-common4-graphics-dev,
-         libignition-physics5 (= ${binary:Version}),
+         libignition-physics6 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Ignition Physics classes and functions for robot apps - Mesh Dev files
@@ -73,13 +73,13 @@ Description: Ignition Physics classes and functions for robot apps - Mesh Dev fi
   .
   Mesh component, development files
 
-Package: libignition-physics5-heightmap-dev
+Package: libignition-physics6-heightmap-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics5-core-dev (= ${binary:Version}),
+Depends: libignition-physics6-core-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
          libignition-common4-graphics-dev,
-         libignition-physics5 (= ${binary:Version}),
+         libignition-physics6 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Ignition Physics classes and functions for robot apps - Heightmap Dev files
@@ -88,7 +88,7 @@ Description: Ignition Physics classes and functions for robot apps - Heightmap D
   .
   Heightmap component, development files
 
-Package: libignition-physics5
+Package: libignition-physics6
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
@@ -100,13 +100,13 @@ Description: Ignition Physics classes and functions for robot apps - Shared libr
   .
   Main shared library
 
-Package: libignition-physics5-dartsim-dev
+Package: libignition-physics6-dartsim-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics5-core-dev (= ${binary:Version}),
-         libignition-physics5-sdf-dev (= ${binary:Version}),
-         libignition-physics5-mesh-dev (= ${binary:Version}),
-         libignition-physics5-heightmap-dev (= ${binary:Version}),
+Depends: libignition-physics6-core-dev (= ${binary:Version}),
+         libignition-physics6-sdf-dev (= ${binary:Version}),
+         libignition-physics6-mesh-dev (= ${binary:Version}),
+         libignition-physics6-heightmap-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
          libignition-common4-graphics-dev,
          libignition-math6-dev,
@@ -122,7 +122,7 @@ Depends: libignition-physics5-core-dev (= ${binary:Version}),
          libdart6-external-ikfast-dev (<< 6.10.0) | libdart-external-ikfast-dev (>> 6.9.0),
          libdart6-collision-bullet-dev (<< 6.10.0) | libdart-collision-bullet-dev (>> 6.9.0),
          libsdformat12-dev,
-         libignition-physics5-dartsim (= ${binary:Version}),
+         libignition-physics6-dartsim (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Ignition Physics classes and functions for robot apps - Development files
@@ -131,7 +131,7 @@ Description: Ignition Physics classes and functions for robot apps - Development
   .
   Dartsim component, development files
 
-Package: libignition-physics5-dartsim
+Package: libignition-physics6-dartsim
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
@@ -143,18 +143,18 @@ Description: Ignition Physics classes and functions for robot apps - Dartsim lib
   .
   DARTSim component shared library
 
-Package: libignition-physics5-tpe-dev
+Package: libignition-physics6-tpe-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics5-core-dev (= ${binary:Version}),
-         libignition-physics5-sdf-dev (= ${binary:Version}),
-         libignition-physics5-mesh-dev (= ${binary:Version}),
+Depends: libignition-physics6-core-dev (= ${binary:Version}),
+         libignition-physics6-sdf-dev (= ${binary:Version}),
+         libignition-physics6-mesh-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
          libignition-math6-dev,
          libignition-math6-eigen3-dev,
          libignition-plugin-dev (>= 1.1.0),
          libsdformat12-dev,
-         libignition-physics5-tpe (= ${binary:Version}),
+         libignition-physics6-tpe (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Ignition Physics classes and functions for robot apps - Development files
@@ -163,7 +163,7 @@ Description: Ignition Physics classes and functions for robot apps - Development
   .
   TPE plugin component, development files
 
-Package: libignition-physics5-tpe
+Package: libignition-physics6-tpe
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
@@ -175,14 +175,14 @@ Description: Ignition Physics classes and functions for robot apps - TPE library
   .
   TPE plugin component shared library
 
-Package: libignition-physics5-tpelib-dev
+Package: libignition-physics6-tpelib-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-cmake2-dev (>= 2.1.0),
          libignition-math6-dev,
          libignition-math6-eigen3-dev,
          libignition-plugin-dev (>= 1.1.0),
-         libignition-physics5-tpelib (= ${binary:Version}),
+         libignition-physics6-tpelib (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Ignition Physics classes and functions for robot apps - Development files
@@ -191,7 +191,7 @@ Description: Ignition Physics classes and functions for robot apps - Development
   .
   TPE library component, development files
 
-Package: libignition-physics5-tpelib
+Package: libignition-physics6-tpelib
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
@@ -203,12 +203,12 @@ Description: Ignition Physics classes and functions for robot apps - TPE library
   .
   TPE library component shared library
 
-Package: libignition-physics5-bullet-dev
+Package: libignition-physics6-bullet-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics5-core-dev (= ${binary:Version}),
-         libignition-physics5-sdf-dev (= ${binary:Version}),
-         libignition-physics5-mesh-dev (= ${binary:Version}),
+Depends: libignition-physics6-core-dev (= ${binary:Version}),
+         libignition-physics6-sdf-dev (= ${binary:Version}),
+         libignition-physics6-mesh-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
          libignition-common4-graphics-dev,
          libignition-math6-dev,
@@ -216,7 +216,7 @@ Depends: libignition-physics5-core-dev (= ${binary:Version}),
          libignition-plugin-dev,
          libbullet-dev,
          libsdformat11-dev,
-         libignition-physics5-bullet (= ${binary:Version}),
+         libignition-physics6-bullet (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Ignition Physics classes and functions for robot apps - Development files
@@ -225,7 +225,7 @@ Description: Ignition Physics classes and functions for robot apps - Development
   .
   Bullet component, development files
 
-Package: libignition-physics5-bullet
+Package: libignition-physics6-bullet
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
@@ -237,17 +237,17 @@ Description: Ignition Physics classes and functions for robot apps - Bullet engi
   .
   Bullet component shared library
 
-Package: libignition-physics5-dev
+Package: libignition-physics6-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics5-core-dev (= ${binary:Version}),
-         libignition-physics5-bullet-dev (= ${binary:Version}),
-         libignition-physics5-dartsim-dev (= ${binary:Version}),
-         libignition-physics5-heightmap-dev (= ${binary:Version}),
-         libignition-physics5-mesh-dev (= ${binary:Version}),
-         libignition-physics5-sdf-dev (= ${binary:Version}),
-         libignition-physics5-tpe-dev (= ${binary:Version}),
-         libignition-physics5-tpelib-dev (= ${binary:Version}),
+Depends: libignition-physics6-core-dev (= ${binary:Version}),
+         libignition-physics6-bullet-dev (= ${binary:Version}),
+         libignition-physics6-dartsim-dev (= ${binary:Version}),
+         libignition-physics6-heightmap-dev (= ${binary:Version}),
+         libignition-physics6-mesh-dev (= ${binary:Version}),
+         libignition-physics6-sdf-dev (= ${binary:Version}),
+         libignition-physics6-tpe-dev (= ${binary:Version}),
+         libignition-physics6-tpelib-dev (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Ignition Physics classes and functions for robot apps - Metapackage
