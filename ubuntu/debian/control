@@ -8,10 +8,10 @@ Build-Depends: cmake,
                debhelper (>= 9),
                libbullet-dev,
                libignition-cmake2-dev (>= 2.1.0),
-               libignition-common4-graphics-dev,
-               libignition-common4-profiler-dev,
-               libignition-math6-dev,
-               libignition-math6-eigen3-dev,
+               libignition-common5-graphics-dev,
+               libignition-common5-profiler-dev,
+               libignition-math7-dev,
+               libignition-math7-eigen3-dev,
                libignition-plugin-dev (>= 1.1.0),
                libignition-utils1-dev,
                libignition-utils1-cli-dev,
@@ -23,7 +23,7 @@ Build-Depends: cmake,
                libdart6-external-odelcpsolver-dev (<< 6.10.0) | libdart-external-odelcpsolver-dev (<< 6.10.0),
                libdart6-utils-dev (<< 6.10.0) | libdart-utils-dev (<< 6.10.0),
                libdart6-utils-urdf-dev (<< 6.10.0) | libdart-utils-urdf-dev (<< 6.10.0),
-               libsdformat12-dev
+               libsdformat13-dev
 Vcs-Browser: https://github.com/ignition-release/ign-physics6-release
 Vcs-Git: https://github.com/ignition-release/ign-physics6-release
 Homepage: http://ignitionrobotics.org/
@@ -32,7 +32,7 @@ Package: libignition-physics6-core-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-cmake2-dev (>= 2.1.0),
-         libignition-math6-dev,
+         libignition-math7-dev,
          libignition-plugin-dev (>= 1.1.0),
          libignition-physics6 (= ${binary:Version}),
          libignition-utils1-dev,
@@ -49,7 +49,7 @@ Architecture: any
 Section: libdevel
 Depends: libignition-physics6-core-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
-         libsdformat12-dev,
+         libsdformat13-dev,
          libignition-physics6 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
@@ -64,7 +64,7 @@ Architecture: any
 Section: libdevel
 Depends: libignition-physics6-core-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
-         libignition-common4-graphics-dev,
+         libignition-common5-graphics-dev,
          libignition-physics6 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
@@ -79,7 +79,7 @@ Architecture: any
 Section: libdevel
 Depends: libignition-physics6-core-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
-         libignition-common4-graphics-dev,
+         libignition-common5-graphics-dev,
          libignition-physics6 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
@@ -109,9 +109,9 @@ Depends: libignition-physics6-core-dev (= ${binary:Version}),
          libignition-physics6-mesh-dev (= ${binary:Version}),
          libignition-physics6-heightmap-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
-         libignition-common4-graphics-dev,
-         libignition-math6-dev,
-         libignition-math6-eigen3-dev,
+         libignition-common5-graphics-dev,
+         libignition-math7-dev,
+         libignition-math7-eigen3-dev,
          libignition-plugin-dev (>= 1.1.0),
          libdart6-dev (<< 6.10.0) | libdart-dev (<< 6.10.0),
          libdart6-collision-ode-dev (<< 6.10.0) | libdart-collision-ode-dev (<< 6.10.0),
@@ -120,7 +120,7 @@ Depends: libignition-physics6-core-dev (= ${binary:Version}),
          libdart6-external-odelcpsolver-dev (<< 6.10.0) | libdart-external-odelcpsolver-dev (<< 6.10.0),
          libdart6-external-ikfast-dev (<< 6.10.0) | libdart-external-ikfast-dev (<< 6.10.0),
          libdart6-collision-bullet-dev (<< 6.10.0) | libdart-collision-bullet-dev (<< 6.10.0),
-         libsdformat12-dev,
+         libsdformat13-dev,
          libignition-physics6-dartsim (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
@@ -149,10 +149,10 @@ Depends: libignition-physics6-core-dev (= ${binary:Version}),
          libignition-physics6-sdf-dev (= ${binary:Version}),
          libignition-physics6-mesh-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
-         libignition-math6-dev,
-         libignition-math6-eigen3-dev,
+         libignition-math7-dev,
+         libignition-math7-eigen3-dev,
          libignition-plugin-dev (>= 1.1.0),
-         libsdformat12-dev,
+         libsdformat13-dev,
          libignition-physics6-tpe (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
@@ -178,8 +178,8 @@ Package: libignition-physics6-tpelib-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-cmake2-dev (>= 2.1.0),
-         libignition-math6-dev,
-         libignition-math6-eigen3-dev,
+         libignition-math7-dev,
+         libignition-math7-eigen3-dev,
          libignition-plugin-dev (>= 1.1.0),
          libignition-physics6-tpelib (= ${binary:Version}),
          ${misc:Depends}
@@ -209,11 +209,11 @@ Depends: libignition-physics6-core-dev (= ${binary:Version}),
          libignition-physics6-sdf-dev (= ${binary:Version}),
          libignition-physics6-mesh-dev (= ${binary:Version}),
          libignition-cmake2-dev (>= 2.1.0),
-         libignition-common4-graphics-dev,
-         libignition-math6-dev,
+         libignition-common5-graphics-dev,
+         libignition-math7-dev,
          libignition-plugin-dev (>= 1.1.0),
          libbullet-dev,
-         libsdformat11-dev,
+         libsdformat13-dev,
          libignition-physics6-bullet (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
