@@ -7,7 +7,7 @@ Build-Depends: cmake,
                pkg-config,
                debhelper (>= 9),
                libbullet-dev,
-               libignition-cmake2-dev (>= 2.1.0),
+               libignition-cmake3-dev,
                libignition-common5-geospatial-dev,
                libignition-common5-graphics-dev,
                libignition-common5-profiler-dev,
@@ -31,7 +31,7 @@ Homepage: http://ignitionrobotics.org/
 Package: libignition-physics6-core-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-cmake2-dev (>= 2.1.0),
+Depends: libignition-cmake3-dev,
          libignition-math7-dev,
          libignition-plugin2-dev,
          libignition-physics6 (= ${binary:Version}),
@@ -48,7 +48,7 @@ Package: libignition-physics6-sdf-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-physics6-core-dev (= ${binary:Version}),
-         libignition-cmake2-dev (>= 2.1.0),
+         libignition-cmake3-dev,
          libsdformat13-dev,
          libignition-physics6 (= ${binary:Version}),
          ${misc:Depends}
@@ -63,7 +63,7 @@ Package: libignition-physics6-mesh-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-physics6-core-dev (= ${binary:Version}),
-         libignition-cmake2-dev (>= 2.1.0),
+         libignition-cmake3-dev,
          libignition-common5-geospatial-dev,
          libignition-common5-graphics-dev,
          libignition-physics6 (= ${binary:Version}),
@@ -79,7 +79,7 @@ Package: libignition-physics6-heightmap-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-physics6-core-dev (= ${binary:Version}),
-         libignition-cmake2-dev (>= 2.1.0),
+         libignition-cmake3-dev,
          libignition-common5-geospatial-dev,
          libignition-common5-graphics-dev,
          libignition-physics6 (= ${binary:Version}),
@@ -110,7 +110,7 @@ Depends: libignition-physics6-core-dev (= ${binary:Version}),
          libignition-physics6-sdf-dev (= ${binary:Version}),
          libignition-physics6-mesh-dev (= ${binary:Version}),
          libignition-physics6-heightmap-dev (= ${binary:Version}),
-         libignition-cmake2-dev (>= 2.1.0),
+         libignition-cmake3-dev,
          libignition-common5-geospatial-dev,
          libignition-common5-graphics-dev,
          libignition-math7-dev,
@@ -153,7 +153,7 @@ Section: libdevel
 Depends: libignition-physics6-core-dev (= ${binary:Version}),
          libignition-physics6-sdf-dev (= ${binary:Version}),
          libignition-physics6-mesh-dev (= ${binary:Version}),
-         libignition-cmake2-dev (>= 2.1.0),
+         libignition-cmake3-dev,
          libignition-math7-dev,
          libignition-math7-eigen3-dev,
          libignition-plugin2-dev,
@@ -182,7 +182,7 @@ Description: Ignition Physics classes and functions for robot apps - TPE library
 Package: libignition-physics6-tpelib-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-cmake2-dev (>= 2.1.0),
+Depends: libignition-cmake3-dev,
          libignition-math7-dev,
          libignition-math7-eigen3-dev,
          libignition-plugin2-dev,
@@ -213,7 +213,7 @@ Section: libdevel
 Depends: libignition-physics6-core-dev (= ${binary:Version}),
          libignition-physics6-sdf-dev (= ${binary:Version}),
          libignition-physics6-mesh-dev (= ${binary:Version}),
-         libignition-cmake2-dev (>= 2.1.0),
+         libignition-cmake3-dev,
          libignition-common5-geospatial-dev,
          libignition-common5-graphics-dev,
          libignition-math7-dev,
