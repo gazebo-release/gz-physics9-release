@@ -1,3 +1,4 @@
 usr/include/ignition/physics*/ignition/physics/mesh/*
+usr/include/ignition/physics*/gz/physics/mesh/*
 usr/lib/*/cmake/ignition-physics[0-99]-mesh/*
 usr/lib/*/pkgconfig/ignition-physics[0-99]-mesh.pc

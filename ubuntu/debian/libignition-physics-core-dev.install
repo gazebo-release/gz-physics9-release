@@ -1,6 +1,8 @@
 usr/include/ignition/physics[0-99]/ignition/physics.hh
 usr/include/ignition/physics[0-99]/ignition/physics/*.hh
-usr/include/ignition/physics[0-99]/ignition/physics/detail/*.hh
+usr/include/ignition/physics[0-99]/gz/physics.hh
+usr/include/ignition/physics[0-99]/gz/physics/*.hh
+usr/include/ignition/physics[0-99]/gz/physics/detail/*.hh
 usr/lib/*/libignition-physics[0-99].so
 usr/lib/*/pkgconfig/ignition-physics[0-99].pc
 usr/lib/*/cmake/ignition-physics[0-99]/ignition-physics*
