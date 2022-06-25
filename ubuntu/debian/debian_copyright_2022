@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: ignition-physics
-Upstream-Contact: https://github.com/ignitionrobotics/ign-physics/issues
-Source: https://github.com/ignitionrobotics/ign-physics
+Upstream-Name: gz-physics
+Upstream-Contact: https://github.com/gazebosim/gz-physics/issues
+Source: https://github.com/gazebosim/gz-physics
 Files-Excluded: .github
                 NEWS
                 codecov.yml

@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 # Ubuntu jammy is using linker optimizations that make some of the test to
-# segfault. See https://github.com/ignitionrobotics/ign-physics/issues/330
+# segfault. See https://github.com/gazebosim/gz-physics/issues/330
 CXXFLAGS:=$(filter-out -flto=auto -ffat-lto-objects -flto=auto -ffat-lto-objects,$(CXXFLAGS))
 LDFLAGS:=$(filter-out -flto=auto -ffat-lto-objects -flto=auto -ffat-lto-objects,$(LDFLAGS))
 
@@ -13,7 +13,7 @@ override_dh_auto_configure:
 	    -DCMAKE_BUILD_TYPE=RelWithDebInfo
 
 # test cannot run in parallel
-# arm64 problems https://github.com/ignitionrobotics/ign-physics/issues/70
+# arm64 problems https://github.com/gazebosim/gz-physics/issues/70
 override_dh_auto_test:
 ifeq ($(DEB_HOST_ARCH),arm64)
 	true
