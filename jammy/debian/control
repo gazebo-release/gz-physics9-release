@@ -1,4 +1,4 @@
-Source: ignition-physics6
+Source: gz-physics6
 Maintainer: Jose Luis Rivero <jrivero@osrfoundation.org>
 Section: science
 Priority: optional
@@ -30,7 +30,7 @@ Vcs-Git: https://github.com/ignition-release/ign-physics6-release
 Standards-Version: 4.5.1
 Homepage: http://ignitionrobotics.org/
 
-Package: libignition-physics6-core-dev
+Package: libgz-physics6-core-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-cmake3-dev,
@@ -46,7 +46,7 @@ Description: Ignition Physics classes and functions for robot apps - Development
  .
  Core component, development files
 
-Package: libignition-physics6-sdf-dev
+Package: libgz-physics6-sdf-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-physics6-core-dev (= ${binary:Version}),
@@ -61,7 +61,7 @@ Description: Ignition Physics classes and functions for robot apps - SDF Dev fil
  .
  SDF component, development files
 
-Package: libignition-physics6-mesh-dev
+Package: libgz-physics6-mesh-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-physics6-core-dev (= ${binary:Version}),
@@ -77,7 +77,7 @@ Description: Ignition Physics classes and functions for robot apps - Mesh Dev fi
  .
  Mesh component, development files
 
-Package: libignition-physics6-heightmap-dev
+Package: libgz-physics6-heightmap-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-physics6-core-dev (= ${binary:Version}),
@@ -93,7 +93,7 @@ Description: Ignition Physics classes and functions for robot apps - Heightmap D
  .
  Heightmap component, development files
 
-Package: libignition-physics6
+Package: libgz-physics6
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
@@ -105,7 +105,7 @@ Description: Ignition Physics classes and functions for robot apps - Shared libr
  .
  Main shared library
 
-Package: libignition-physics6-dartsim-dev
+Package: libgz-physics6-dartsim-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-physics6-core-dev (= ${binary:Version}),
@@ -137,7 +137,7 @@ Description: Ignition Physics classes and functions for robot apps - Development
  .
  Dartsim component, development files
 
-Package: libignition-physics6-dartsim
+Package: libgz-physics6-dartsim
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
@@ -149,7 +149,7 @@ Description: Ignition Physics classes and functions for robot apps - Dartsim lib
  .
  DARTSim component shared library
 
-Package: libignition-physics6-tpe-dev
+Package: libgz-physics6-tpe-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-physics6-core-dev (= ${binary:Version}),
@@ -169,7 +169,7 @@ Description: Ignition Physics classes and functions for robot apps - Development
  .
  TPE plugin component, development files
 
-Package: libignition-physics6-tpe
+Package: libgz-physics6-tpe
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
@@ -181,7 +181,7 @@ Description: Ignition Physics classes and functions for robot apps - TPE library
  .
  TPE plugin component shared library
 
-Package: libignition-physics6-tpelib-dev
+Package: libgz-physics6-tpelib-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-cmake3-dev,
@@ -197,7 +197,7 @@ Description: Ignition Physics classes and functions for robot apps - Development
  .
  TPE library component, development files
 
-Package: libignition-physics6-tpelib
+Package: libgz-physics6-tpelib
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
@@ -209,7 +209,7 @@ Description: Ignition Physics classes and functions for robot apps - TPE library
  .
  TPE library component shared library
 
-Package: libignition-physics6-bullet-dev
+Package: libgz-physics6-bullet-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-physics6-core-dev (= ${binary:Version}),
@@ -231,7 +231,7 @@ Description: Ignition Physics classes and functions for robot apps - Development
  .
  Bullet component, development files
 
-Package: libignition-physics6-bullet
+Package: libgz-physics6-bullet
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
@@ -243,7 +243,7 @@ Description: Ignition Physics classes and functions for robot apps - Bullet engi
  .
  Bullet component shared library
 
-Package: libignition-physics6-dev
+Package: libgz-physics6-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-physics6-core-dev (= ${binary:Version}),
@@ -261,3 +261,115 @@ Description: Ignition Physics classes and functions for robot apps - Metapackage
  designed to rapidly develop robot applications.
  .
  Metapackage, all development files
+
+Package: libignition-physics6-core-dev
+Depends: libgz-physics6-core-dev, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: libignition-physics6-sdf-dev
+Depends: libgz-physics6-sdf-dev, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: libignition-physics6-mesh-dev
+Depends: libgz-physics6-mesh-dev, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: libignition-physics6-heightmap-dev
+Depends: libgz-physics6-heightmap-dev, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: libignition-physics6
+Depends: libgz-physics6, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: libignition-physics6-dartsim-dev
+Depends: libgz-physics6-dartsim-dev, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: libignition-physics6-dartsim
+Depends: libgz-physics6-dartsim, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: libignition-physics6-tpe-dev
+Depends: libgz-physics6-tpe-dev, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: libignition-physics6-tpe
+Depends: libgz-physics6-tpe, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: libignition-physics6-tpelib-dev
+Depends: libgz-physics6-tpelib-dev, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: libignition-physics6-tpelib
+Depends: libgz-physics6-tpelib, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: libignition-physics6-bullet-dev
+Depends: libgz-physics6-bullet-dev, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: libignition-physics6-bullet
+Depends: libgz-physics6-bullet, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: libignition-physics6-dev
+Depends: libgz-physics6-dev, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
