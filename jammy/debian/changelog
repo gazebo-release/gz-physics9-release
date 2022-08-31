@@ -1,3 +1,9 @@
+gz-physics6 (6.0.0~pre1-1~jammy) jammy; urgency=medium
+
+  * gz-physics6 6.0.0~pre1-1 release
+
+ -- Louise Poubel <louise@openrobotics.org>  Wed, 31 Aug 2022 12:41:51 -0700
+
 gz-physics6 (5.999.999-1~jammy) jammy; urgency=medium
 
   * First release for jammy
