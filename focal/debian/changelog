@@ -1,3 +1,9 @@
+gz-physics6 (6.0.0-1~focal) focal; urgency=medium
+
+  * gz-physics6 6.0.0-1 release
+
+ -- Nate Koenig <nate@openrobotics.org>  Mon, 26 Sep 2022 11:00:34 -0700
+
 gz-physics6 (6.0.0~pre1-1~focal) focal; urgency=medium
 
   * gz-physics6 6.0.0~pre1-1 release
