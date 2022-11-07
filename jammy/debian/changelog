@@ -1,3 +1,9 @@
+gz-physics6 (6.1.1-1~jammy) jammy; urgency=medium
+
+  * gz-physics6 6.1.1-1 release
+
+ -- Michael Carroll <michael@openrobotics.org>  Mon, 07 Nov 2022 13:24:55 -0600
+
 gz-physics6 (6.1.0-1~jammy) jammy; urgency=medium
 
   * gz-physics6 6.1.0-1 release
