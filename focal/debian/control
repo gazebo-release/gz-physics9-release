@@ -7,15 +7,15 @@ Build-Depends: cmake,
                pkg-config,
                debhelper (>= 9),
                libbullet-dev,
-               libignition-cmake3-dev,
-               libignition-common5-geospatial-dev,
-               libignition-common5-graphics-dev,
-               libignition-common5-profiler-dev,
-               libignition-math7-dev,
-               libignition-math7-eigen3-dev,
-               libignition-plugin2-dev,
-               libignition-utils2-dev,
-               libignition-utils2-cli-dev,
+               libgz-cmake3-dev,
+               libgz-common5-geospatial-dev,
+               libgz-common5-graphics-dev,
+               libgz-common5-profiler-dev,
+               libgz-math7-dev,
+               libgz-math7-eigen3-dev,
+               libgz-plugin2-dev,
+               libgz-utils2-dev,
+               libgz-utils2-cli-dev,
                libdart6-dev (<< 6.10.0) | libdart-dev (>> 6.9.0),
                libdart6-collision-bullet-dev (<< 6.10.0) | libdart-collision-bullet-dev (>> 6.9.0),
                libdart6-collision-ode-dev (<< 6.10.0) | libdart-collision-ode-dev (>> 6.9.0),
@@ -24,22 +24,22 @@ Build-Depends: cmake,
                libdart6-utils-dev (<< 6.10.0) | libdart-utils-dev (>> 6.9.0),
                libdart6-utils-urdf-dev (<< 6.10.0) | libdart-utils-urdf-dev (>> 6.9.0),
                libsdformat13-dev
-Vcs-Browser: https://github.com/ignition-release/ign-physics6-release
-Vcs-Git: https://github.com/ignition-release/ign-physics6-release
-Homepage: http://ignitionrobotics.org/
+Vcs-Browser: https://github.com/gazebosim/gz-physics
+Vcs-Git: https://github.com/gazebo-release/gz-physics6-release
+Homepage: http://gazebosim.org/
 
 Package: libgz-physics6-core-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-cmake3-dev,
-         libignition-math7-dev,
-         libignition-plugin2-dev,
-         libignition-physics6 (= ${binary:Version}),
-         libignition-utils2-dev,
+Depends: libgz-cmake3-dev,
+         libgz-math7-dev,
+         libgz-plugin2-dev,
+         libgz-physics6 (= ${binary:Version}),
+         libgz-utils2-dev,
          ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Physics classes and functions for robot apps - Development files
-  Ignition Physics is a component in the ignition framework, a set of libraries
+Description: Gazebo Physics classes and functions for robot apps - Development files
+  Gazebo Physics is a component in the Gazebo framework, a set of libraries
   designed to rapidly develop robot applications.
   .
   Core component, development files
@@ -47,14 +47,14 @@ Description: Ignition Physics classes and functions for robot apps - Development
 Package: libgz-physics6-sdf-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics6-core-dev (= ${binary:Version}),
-         libignition-cmake3-dev,
+Depends: libgz-physics6-core-dev (= ${binary:Version}),
+         libgz-cmake3-dev,
          libsdformat13-dev,
-         libignition-physics6 (= ${binary:Version}),
+         libgz-physics6 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Physics classes and functions for robot apps - SDF Dev files
-  Ignition Physics is a component in the ignition framework, a set of libraries
+Description: Gazebo Physics classes and functions for robot apps - SDF Dev files
+  Gazebo Physics is a component in the Gazebo framework, a set of libraries
   designed to rapidly develop robot applications.
   .
   SDF component, development files
@@ -62,15 +62,15 @@ Description: Ignition Physics classes and functions for robot apps - SDF Dev fil
 Package: libgz-physics6-mesh-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics6-core-dev (= ${binary:Version}),
-         libignition-cmake3-dev,
-         libignition-common5-geospatial-dev,
-         libignition-common5-graphics-dev,
-         libignition-physics6 (= ${binary:Version}),
+Depends: libgz-physics6-core-dev (= ${binary:Version}),
+         libgz-cmake3-dev,
+         libgz-common5-geospatial-dev,
+         libgz-common5-graphics-dev,
+         libgz-physics6 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Physics classes and functions for robot apps - Mesh Dev files
-  Ignition Physics is a component in the ignition framework, a set of libraries
+Description: Gazebo Physics classes and functions for robot apps - Mesh Dev files
+  Gazebo Physics is a component in the Gazebo framework, a set of libraries
   designed to rapidly develop robot applications.
   .
   Mesh component, development files
@@ -78,15 +78,15 @@ Description: Ignition Physics classes and functions for robot apps - Mesh Dev fi
 Package: libgz-physics6-heightmap-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics6-core-dev (= ${binary:Version}),
-         libignition-cmake3-dev,
-         libignition-common5-geospatial-dev,
-         libignition-common5-graphics-dev,
-         libignition-physics6 (= ${binary:Version}),
+Depends: libgz-physics6-core-dev (= ${binary:Version}),
+         libgz-cmake3-dev,
+         libgz-common5-geospatial-dev,
+         libgz-common5-graphics-dev,
+         libgz-physics6 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Physics classes and functions for robot apps - Heightmap Dev files
-  Ignition Physics is a component in the ignition framework, a set of libraries
+Description: Gazebo Physics classes and functions for robot apps - Heightmap Dev files
+  Gazebo Physics is a component in the Gazebo framework, a set of libraries
   designed to rapidly develop robot applications.
   .
   Heightmap component, development files
@@ -97,8 +97,8 @@ Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Physics classes and functions for robot apps - Shared library
-  Ignition Physics is a component in the ignition framework, a set of libraries
+Description: Gazebo Physics classes and functions for robot apps - Shared library
+  Gazebo Physics is a component in the Gazebo framework, a set of libraries
   designed to rapidly develop robot applications.
   .
   Main shared library
@@ -106,16 +106,16 @@ Description: Ignition Physics classes and functions for robot apps - Shared libr
 Package: libgz-physics6-dartsim-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics6-core-dev (= ${binary:Version}),
-         libignition-physics6-sdf-dev (= ${binary:Version}),
-         libignition-physics6-mesh-dev (= ${binary:Version}),
-         libignition-physics6-heightmap-dev (= ${binary:Version}),
-         libignition-cmake3-dev,
-         libignition-common5-geospatial-dev,
-         libignition-common5-graphics-dev,
-         libignition-math7-dev,
-         libignition-math7-eigen3-dev,
-         libignition-plugin2-dev,
+Depends: libgz-physics6-core-dev (= ${binary:Version}),
+         libgz-physics6-sdf-dev (= ${binary:Version}),
+         libgz-physics6-mesh-dev (= ${binary:Version}),
+         libgz-physics6-heightmap-dev (= ${binary:Version}),
+         libgz-cmake3-dev,
+         libgz-common5-geospatial-dev,
+         libgz-common5-graphics-dev,
+         libgz-math7-dev,
+         libgz-math7-eigen3-dev,
+         libgz-plugin2-dev,
          libdart6-dev (>> 6.9.0) | libdart-dev (>> 6.9.0),
          libdart6-collision-ode-dev (<< 6.10.0) | libdart-collision-ode-dev (>> 6.9.0),
          libdart6-utils-urdf-dev (<< 6.10.0) | libdart-utils-urdf-dev (>> 6.9.0),
@@ -126,11 +126,11 @@ Depends: libignition-physics6-core-dev (= ${binary:Version}),
          libdart6-external-ikfast-dev (<< 6.10.0) | libdart-external-ikfast-dev (>> 6.9.0),
          libdart6-collision-bullet-dev (<< 6.10.0) | libdart-collision-bullet-dev (>> 6.9.0),
          libsdformat13-dev,
-         libignition-physics6-dartsim (= ${binary:Version}),
+         libgz-physics6-dartsim (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Physics classes and functions for robot apps - Development files
-  Ignition Physics is a component in the ignition framework, a set of libraries
+Description: Gazebo Physics classes and functions for robot apps - Development files
+  Gazebo Physics is a component in the Gazebo framework, a set of libraries
   designed to rapidly develop robot applications.
   .
   Dartsim component, development files
@@ -141,8 +141,8 @@ Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Physics classes and functions for robot apps - Dartsim library
-  Ignition Physics is a component in the ignition framework, a set of libraries
+Description: Gazebo Physics classes and functions for robot apps - Dartsim library
+  Gazebo Physics is a component in the Gazebo framework, a set of libraries
   designed to rapidly develop robot applications.
   .
   DARTSim component shared library
@@ -150,19 +150,19 @@ Description: Ignition Physics classes and functions for robot apps - Dartsim lib
 Package: libgz-physics6-tpe-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics6-core-dev (= ${binary:Version}),
-         libignition-physics6-sdf-dev (= ${binary:Version}),
-         libignition-physics6-mesh-dev (= ${binary:Version}),
-         libignition-cmake3-dev,
-         libignition-math7-dev,
-         libignition-math7-eigen3-dev,
-         libignition-plugin2-dev,
+Depends: libgz-physics6-core-dev (= ${binary:Version}),
+         libgz-physics6-sdf-dev (= ${binary:Version}),
+         libgz-physics6-mesh-dev (= ${binary:Version}),
+         libgz-cmake3-dev,
+         libgz-math7-dev,
+         libgz-math7-eigen3-dev,
+         libgz-plugin2-dev,
          libsdformat13-dev,
-         libignition-physics6-tpe (= ${binary:Version}),
+         libgz-physics6-tpe (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Physics classes and functions for robot apps - Development files
-  Ignition Physics is a component in the ignition framework, a set of libraries
+Description: Gazebo Physics classes and functions for robot apps - Development files
+  Gazebo Physics is a component in the Gazebo framework, a set of libraries
   designed to rapidly develop robot applications.
   .
   TPE plugin component, development files
@@ -173,8 +173,8 @@ Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Physics classes and functions for robot apps - TPE library
-  Ignition Physics is a component in the ignition framework, a set of libraries
+Description: Gazebo Physics classes and functions for robot apps - TPE library
+  Gazebo Physics is a component in the Gazebo framework, a set of libraries
   designed to rapidly develop robot applications.
   .
   TPE plugin component shared library
@@ -182,15 +182,15 @@ Description: Ignition Physics classes and functions for robot apps - TPE library
 Package: libgz-physics6-tpelib-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-cmake3-dev,
-         libignition-math7-dev,
-         libignition-math7-eigen3-dev,
-         libignition-plugin2-dev,
-         libignition-physics6-tpelib (= ${binary:Version}),
+Depends: libgz-cmake3-dev,
+         libgz-math7-dev,
+         libgz-math7-eigen3-dev,
+         libgz-plugin2-dev,
+         libgz-physics6-tpelib (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Physics classes and functions for robot apps - Development files
-  Ignition Physics is a component in the ignition framework, a set of libraries
+Description: Gazebo Physics classes and functions for robot apps - Development files
+  Gazebo Physics is a component in the Gazebo framework, a set of libraries
   designed to rapidly develop robot applications.
   .
   TPE library component, development files
@@ -201,8 +201,8 @@ Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Physics classes and functions for robot apps - TPE library
-  Ignition Physics is a component in the ignition framework, a set of libraries
+Description: Gazebo Physics classes and functions for robot apps - TPE library
+  Gazebo Physics is a component in the Gazebo framework, a set of libraries
   designed to rapidly develop robot applications.
   .
   TPE library component shared library
@@ -210,22 +210,22 @@ Description: Ignition Physics classes and functions for robot apps - TPE library
 Package: libgz-physics6-bullet-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics6-core-dev (= ${binary:Version}),
-         libignition-physics6-sdf-dev (= ${binary:Version}),
-         libignition-physics6-mesh-dev (= ${binary:Version}),
-         libignition-cmake3-dev,
-         libignition-common5-geospatial-dev,
-         libignition-common5-graphics-dev,
-         libignition-math7-dev,
-         libignition-math7-eigen3-dev,
-         libignition-plugin2-dev,
+Depends: libgz-physics6-core-dev (= ${binary:Version}),
+         libgz-physics6-sdf-dev (= ${binary:Version}),
+         libgz-physics6-mesh-dev (= ${binary:Version}),
+         libgz-cmake3-dev,
+         libgz-common5-geospatial-dev,
+         libgz-common5-graphics-dev,
+         libgz-math7-dev,
+         libgz-math7-eigen3-dev,
+         libgz-plugin2-dev,
          libbullet-dev,
          libsdformat13-dev,
-         libignition-physics6-bullet (= ${binary:Version}),
+         libgz-physics6-bullet (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Physics classes and functions for robot apps - Development files
-  Ignition Physics is a component in the ignition framework, a set of libraries
+Description: Gazebo Physics classes and functions for robot apps - Development files
+  Gazebo Physics is a component in the Gazebo framework, a set of libraries
   designed to rapidly develop robot applications.
   .
   Bullet component, development files
@@ -236,8 +236,8 @@ Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Physics classes and functions for robot apps - Bullet engine
-  Ignition Physics is a component in the ignition framework, a set of libraries
+Description: Gazebo Physics classes and functions for robot apps - Bullet engine
+  Gazebo Physics is a component in the Gazebo framework, a set of libraries
   designed to rapidly develop robot applications.
   .
   Bullet component shared library
@@ -245,18 +245,18 @@ Description: Ignition Physics classes and functions for robot apps - Bullet engi
 Package: libgz-physics6-dev
 Architecture: any
 Section: libdevel
-Depends: libignition-physics6-core-dev (= ${binary:Version}),
-         libignition-physics6-bullet-dev (= ${binary:Version}),
-         libignition-physics6-dartsim-dev (= ${binary:Version}),
-         libignition-physics6-heightmap-dev (= ${binary:Version}),
-         libignition-physics6-mesh-dev (= ${binary:Version}),
-         libignition-physics6-sdf-dev (= ${binary:Version}),
-         libignition-physics6-tpe-dev (= ${binary:Version}),
-         libignition-physics6-tpelib-dev (= ${binary:Version}),
+Depends: libgz-physics6-core-dev (= ${binary:Version}),
+         libgz-physics6-bullet-dev (= ${binary:Version}),
+         libgz-physics6-dartsim-dev (= ${binary:Version}),
+         libgz-physics6-heightmap-dev (= ${binary:Version}),
+         libgz-physics6-mesh-dev (= ${binary:Version}),
+         libgz-physics6-sdf-dev (= ${binary:Version}),
+         libgz-physics6-tpe-dev (= ${binary:Version}),
+         libgz-physics6-tpelib-dev (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
-Description: Ignition Physics classes and functions for robot apps - Metapackage
-  Ignition Physics is a component in the ignition framework, a set of libraries
+Description: Gazebo Physics classes and functions for robot apps - Metapackage
+  Gazebo Physics is a component in the Gazebo framework, a set of libraries
   designed to rapidly develop robot applications.
   .
   Metapackage, all development files
