@@ -15,14 +15,15 @@ Build-Depends: cmake,
                libgz-plugin2-dev,
                libgz-utils2-dev,
                libgz-utils2-cli-dev,
-# dart without major version number to get versions coming from Debian
-               libdart6-dev (<< 6.10.0) | libdart-dev (<< 6.10.0),
-               libdart6-collision-bullet-dev (<< 6.10.0) | libdart-collision-bullet-dev (<< 6.10.0),
-               libdart6-collision-ode-dev (<< 6.10.0) | libdart-collision-ode-dev (<< 6.10.0),
-               libdart6-external-ikfast-dev (<< 6.10.0) | libdart-external-ikfast-dev (<< 6.10.0),
-               libdart6-external-odelcpsolver-dev (<< 6.10.0) | libdart-external-odelcpsolver-dev (<< 6.10.0),
-               libdart6-utils-dev (<< 6.10.0) | libdart-utils-dev (<< 6.10.0),
-               libdart6-utils-urdf-dev (<< 6.10.0) | libdart-utils-urdf-dev (<< 6.10.0),
+# DART from Ubuntu repositories, 6.12.1 + OSRF patches
+               libdart-dev (>= 6.12.1+dfsg4),
+               libdart-collision-bullet-dev (>= 6.12.1+dfsg4),
+               libdart-collision-ode-dev (>= 6.12.1+dfsg4),
+               libdart-external-convhull-3d-dev (>= 6.12.1+dfsg4),
+               libdart-external-ikfast-dev (>= 6.12.1+dfsg4),
+               libdart-external-odelcpsolver-dev (>= 6.12.1+dfsg4),
+               libdart-utils-dev (>= 6.12.1+dfsg4),
+               libdart-utils-urdf-dev (>= 6.12.1+dfsg4),
                libsdformat13-dev
 Vcs-Browser: https://github.com/gazebosim/gz-physics
 Vcs-Git: https://github.com/gazebo-release/gz-physics6-release
@@ -38,8 +39,6 @@ Depends: libgz-cmake3-dev,
          libgz-physics6 (= ${binary:Version}),
          libgz-utils2-dev,
          ${misc:Depends}
-Breaks: libignition-physics6-core-dev (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
-Replaces: libignition-physics6-core-dev (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Development files
   Gazebo Physics is a component in the Gazebo framework, a set of libraries
@@ -55,8 +54,6 @@ Depends: libgz-physics6-core-dev (= ${binary:Version}),
          libsdformat13-dev,
          libgz-physics6 (= ${binary:Version}),
          ${misc:Depends}
-Breaks: libignition-physics6-sdf-dev (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
-Replaces: libignition-physics6-sdf-dev (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - SDF Dev files
   Gazebo Physics is a component in the Gazebo framework, a set of libraries
@@ -73,8 +70,6 @@ Depends: libgz-physics6-core-dev (= ${binary:Version}),
          libgz-common5-graphics-dev,
          libgz-physics6 (= ${binary:Version}),
          ${misc:Depends}
-Breaks: libignition-physics6-mesh-dev (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
-Replaces: libignition-physics6-mesh-dev (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Mesh Dev files
   Gazebo Physics is a component in the Gazebo framework, a set of libraries
@@ -91,8 +86,6 @@ Depends: libgz-physics6-core-dev (= ${binary:Version}),
          libgz-common5-graphics-dev,
          libgz-physics6 (= ${binary:Version}),
          ${misc:Depends}
-Breaks: libignition-physics6-heightmap-dev (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
-Replaces: libignition-physics6-heightmap-dev (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Heightmap Dev files
   Gazebo Physics is a component in the Gazebo framework, a set of libraries
@@ -105,8 +98,6 @@ Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Breaks: libignition-physics6 (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
-Replaces: libignition-physics6 (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Shared library
   Gazebo Physics is a component in the Gazebo framework, a set of libraries
@@ -126,19 +117,19 @@ Depends: libgz-physics6-core-dev (= ${binary:Version}),
          libgz-common5-graphics-dev,
          libgz-math7-dev,
          libgz-math7-eigen3-dev,
+         libgz-common5-dev,
          libgz-plugin2-dev,
-         libdart6-dev (<< 6.10.0) | libdart-dev (<< 6.10.0),
-         libdart6-collision-ode-dev (<< 6.10.0) | libdart-collision-ode-dev (<< 6.10.0),
-         libdart6-utils-dev (<< 6.10.0) | libdart-utils-dev (<< 6.10.0),
-         libdart6-utils-urdf-dev (<< 6.10.0) | libdart-utils-urdf-dev (<< 6.10.0),
-         libdart6-external-odelcpsolver-dev (<< 6.10.0) | libdart-external-odelcpsolver-dev (<< 6.10.0),
-         libdart6-external-ikfast-dev (<< 6.10.0) | libdart-external-ikfast-dev (<< 6.10.0),
-         libdart6-collision-bullet-dev (<< 6.10.0) | libdart-collision-bullet-dev (<< 6.10.0),
+         libdart-dev (>= 6.12.1+dfsg4),
+         libdart-external-convhull-3d-dev (>= 6.12.1+dfsg4),
+         libdart-collision-ode-dev (>= 6.12.1+dfsg4),
+         libdart-utils-urdf-dev (>= 6.12.1+dfsg4),
+         libdart-utils-dev (>= 6.12.1+dfsg4),
+         libdart-external-odelcpsolver-dev (>= 6.12.1+dfsg4),
+         libdart-external-ikfast-dev (>= 6.12.1+dfsg4),
+         libdart-collision-bullet-dev (>= 6.12.1+dfsg4),
          libsdformat13-dev,
          libgz-physics6-dartsim (= ${binary:Version}),
          ${misc:Depends}
-Breaks: libignition-physics6-dartsim-dev (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
-Replaces: libignition-physics6-dartsim-dev (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Development files
   Gazebo Physics is a component in the Gazebo framework, a set of libraries
@@ -151,8 +142,6 @@ Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Breaks: libignition-physics6-dartsim (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
-Replaces: libignition-physics6-dartsim (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Dartsim library
   Gazebo Physics is a component in the Gazebo framework, a set of libraries
@@ -173,8 +162,6 @@ Depends: libgz-physics6-core-dev (= ${binary:Version}),
          libsdformat13-dev,
          libgz-physics6-tpe (= ${binary:Version}),
          ${misc:Depends}
-Breaks: libignition-physics6-tpe-dev (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
-Replaces: libignition-physics6-tpe-dev (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Development files
   Gazebo Physics is a component in the Gazebo framework, a set of libraries
@@ -187,8 +174,6 @@ Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Breaks: libignition-physics6-tpe (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
-Replaces: libignition-physics6-tpe (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - TPE library
   Gazebo Physics is a component in the Gazebo framework, a set of libraries
@@ -205,8 +190,6 @@ Depends: libgz-cmake3-dev,
          libgz-plugin2-dev,
          libgz-physics6-tpelib (= ${binary:Version}),
          ${misc:Depends}
-Breaks: libignition-physics6-tpelib-dev (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
-Replaces: libignition-physics6-tpelib-dev (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Development files
   Gazebo Physics is a component in the Gazebo framework, a set of libraries
@@ -219,8 +202,6 @@ Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Breaks: libignition-physics6-tpelib (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
-Replaces: libignition-physics6-tpelib (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - TPE library
   Gazebo Physics is a component in the Gazebo framework, a set of libraries
@@ -244,8 +225,6 @@ Depends: libgz-physics6-core-dev (= ${binary:Version}),
          libsdformat13-dev,
          libgz-physics6-bullet (= ${binary:Version}),
          ${misc:Depends}
-Breaks: libignition-physics6-bullet-dev (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
-Replaces: libignition-physics6-bullet-dev (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Development files
   Gazebo Physics is a component in the Gazebo framework, a set of libraries
@@ -258,8 +237,6 @@ Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Breaks: libignition-physics6-bullet (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
-Replaces: libignition-physics6-bullet (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Bullet engine
   Gazebo Physics is a component in the Gazebo framework, a set of libraries
@@ -279,8 +256,6 @@ Depends: libgz-physics6-core-dev (= ${binary:Version}),
          libgz-physics6-tpe-dev (= ${binary:Version}),
          libgz-physics6-tpelib-dev (= ${binary:Version}),
          ${misc:Depends}
-Breaks: libignition-physics6-dev (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
-Replaces: libignition-physics6-dev (<< 5.999.999+nightly+git20220630+1ra4f04c6580d895d85b753acc894753d93abfb7ea-1)
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Metapackage
   Gazebo Physics is a component in the Gazebo framework, a set of libraries
