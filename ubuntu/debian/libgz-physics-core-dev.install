@@ -4,3 +4,4 @@ usr/include/*/physics[0-99]/gz/physics/detail/*.hh
 usr/lib/*/lib*-physics[0-99].so
 usr/lib/*/pkgconfig/*-physics[0-99].pc
 usr/lib/*/cmake/*-physics[0-99]/*-physics*
+usr/libexec/*
