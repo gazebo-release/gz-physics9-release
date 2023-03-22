@@ -1,3 +1,9 @@
+gz-physics6 (6.3.1-1~focal) focal; urgency=medium
+
+  * gz-physics6 6.3.1-1 release
+
+ -- Addisu Z. Taddese <addisu@openrobotics.org>  Wed, 22 Mar 2023 17:36:45 -0500
+
 gz-physics6 (6.3.0-1~focal) focal; urgency=medium
 
   * gz-physics6 6.3.0-1 release
