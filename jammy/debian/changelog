@@ -1,3 +1,9 @@
+gz-physics6 (6.4.0-1~jammy) jammy; urgency=medium
+
+  * gz-physics6 6.4.0-1 release
+
+ -- Addisu Z. Taddese <addisu@openrobotics.org>  Mon, 22 May 2023 19:18:37 -0500
+
 gz-physics6 (6.3.2-1~jammy) jammy; urgency=medium
 
   * gz-physics6 6.3.2-1 release
