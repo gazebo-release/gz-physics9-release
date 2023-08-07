@@ -1,10 +1,10 @@
-Source: gz-physics6
+Source: gz-physics7
 Maintainer: Jose Luis Rivero <jrivero@osrfoundation.org>
 Section: science
 Priority: optional
 Build-Depends: cmake,
                pkg-config,
-               debhelper (>= 11),
+               debhelper (>= 13),
                libbullet-dev,
                libgz-cmake3-dev,
                libgz-common5-geospatial-dev,
@@ -24,19 +24,19 @@ Build-Depends: cmake,
                libdart-external-odelcpsolver-dev (>= 6.12.1+dfsg4),
                libdart-utils-dev (>= 6.12.1+dfsg4),
                libdart-utils-urdf-dev (>= 6.12.1+dfsg4),
-               libsdformat13-dev
+               libsdformat14-dev
 Vcs-Browser: https://github.com/gazebosim/gz-physics
-Vcs-Git: https://github.com/gazebo-release/gz-physics6-release
+Vcs-Git: https://github.com/gazebo-release/gz-physics7-release
 Standards-Version: 4.5.1
 Homepage: http://gazebosim.org/
 
-Package: libgz-physics6-core-dev
+Package: libgz-physics7-core-dev
 Architecture: any
 Section: libdevel
 Depends: libgz-cmake3-dev,
          libgz-math7-dev,
          libgz-plugin2-dev,
-         libgz-physics6 (= ${binary:Version}),
+         libgz-physics7 (= ${binary:Version}),
          libgz-utils2-dev,
          ${misc:Depends}
 Multi-Arch: same
@@ -46,13 +46,13 @@ Description: Gazebo Physics classes and functions for robot apps - Development f
   .
   Core component, development files
 
-Package: libgz-physics6-sdf-dev
+Package: libgz-physics7-sdf-dev
 Architecture: any
 Section: libdevel
-Depends: libgz-physics6-core-dev (= ${binary:Version}),
+Depends: libgz-physics7-core-dev (= ${binary:Version}),
          libgz-cmake3-dev,
-         libsdformat13-dev,
-         libgz-physics6 (= ${binary:Version}),
+         libsdformat14-dev,
+         libgz-physics7 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - SDF Dev files
@@ -61,14 +61,14 @@ Description: Gazebo Physics classes and functions for robot apps - SDF Dev files
   .
   SDF component, development files
 
-Package: libgz-physics6-mesh-dev
+Package: libgz-physics7-mesh-dev
 Architecture: any
 Section: libdevel
-Depends: libgz-physics6-core-dev (= ${binary:Version}),
+Depends: libgz-physics7-core-dev (= ${binary:Version}),
          libgz-cmake3-dev,
          libgz-common5-geospatial-dev,
          libgz-common5-graphics-dev,
-         libgz-physics6 (= ${binary:Version}),
+         libgz-physics7 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Mesh Dev files
@@ -77,14 +77,14 @@ Description: Gazebo Physics classes and functions for robot apps - Mesh Dev file
   .
   Mesh component, development files
 
-Package: libgz-physics6-heightmap-dev
+Package: libgz-physics7-heightmap-dev
 Architecture: any
 Section: libdevel
-Depends: libgz-physics6-core-dev (= ${binary:Version}),
+Depends: libgz-physics7-core-dev (= ${binary:Version}),
          libgz-cmake3-dev,
          libgz-common5-geospatial-dev,
          libgz-common5-graphics-dev,
-         libgz-physics6 (= ${binary:Version}),
+         libgz-physics7 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Heightmap Dev files
@@ -93,7 +93,7 @@ Description: Gazebo Physics classes and functions for robot apps - Heightmap Dev
   .
   Heightmap component, development files
 
-Package: libgz-physics6
+Package: libgz-physics7
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
@@ -105,13 +105,13 @@ Description: Gazebo Physics classes and functions for robot apps - Shared librar
   .
   Main shared library
 
-Package: libgz-physics6-dartsim-dev
+Package: libgz-physics7-dartsim-dev
 Architecture: any
 Section: libdevel
-Depends: libgz-physics6-core-dev (= ${binary:Version}),
-         libgz-physics6-sdf-dev (= ${binary:Version}),
-         libgz-physics6-mesh-dev (= ${binary:Version}),
-         libgz-physics6-heightmap-dev (= ${binary:Version}),
+Depends: libgz-physics7-core-dev (= ${binary:Version}),
+         libgz-physics7-sdf-dev (= ${binary:Version}),
+         libgz-physics7-mesh-dev (= ${binary:Version}),
+         libgz-physics7-heightmap-dev (= ${binary:Version}),
          libgz-cmake3-dev,
          libgz-common5-geospatial-dev,
          libgz-common5-graphics-dev,
@@ -127,8 +127,8 @@ Depends: libgz-physics6-core-dev (= ${binary:Version}),
          libdart-external-odelcpsolver-dev (>= 6.12.1+dfsg4),
          libdart-external-ikfast-dev (>= 6.12.1+dfsg4),
          libdart-collision-bullet-dev (>= 6.12.1+dfsg4),
-         libsdformat13-dev,
-         libgz-physics6-dartsim (= ${binary:Version}),
+         libsdformat14-dev,
+         libgz-physics7-dartsim (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Development files
@@ -137,7 +137,7 @@ Description: Gazebo Physics classes and functions for robot apps - Development f
   .
   Dartsim component, development files
 
-Package: libgz-physics6-dartsim
+Package: libgz-physics7-dartsim
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
@@ -149,18 +149,18 @@ Description: Gazebo Physics classes and functions for robot apps - Dartsim libra
   .
   DARTSim component shared library
 
-Package: libgz-physics6-tpe-dev
+Package: libgz-physics7-tpe-dev
 Architecture: any
 Section: libdevel
-Depends: libgz-physics6-core-dev (= ${binary:Version}),
-         libgz-physics6-sdf-dev (= ${binary:Version}),
-         libgz-physics6-mesh-dev (= ${binary:Version}),
+Depends: libgz-physics7-core-dev (= ${binary:Version}),
+         libgz-physics7-sdf-dev (= ${binary:Version}),
+         libgz-physics7-mesh-dev (= ${binary:Version}),
          libgz-cmake3-dev,
          libgz-math7-dev,
          libgz-math7-eigen3-dev,
          libgz-plugin2-dev,
-         libsdformat13-dev,
-         libgz-physics6-tpe (= ${binary:Version}),
+         libsdformat14-dev,
+         libgz-physics7-tpe (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Development files
@@ -169,7 +169,7 @@ Description: Gazebo Physics classes and functions for robot apps - Development f
   .
   TPE plugin component, development files
 
-Package: libgz-physics6-tpe
+Package: libgz-physics7-tpe
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
@@ -181,14 +181,14 @@ Description: Gazebo Physics classes and functions for robot apps - TPE library
   .
   TPE plugin component shared library
 
-Package: libgz-physics6-tpelib-dev
+Package: libgz-physics7-tpelib-dev
 Architecture: any
 Section: libdevel
 Depends: libgz-cmake3-dev,
          libgz-math7-dev,
          libgz-math7-eigen3-dev,
          libgz-plugin2-dev,
-         libgz-physics6-tpelib (= ${binary:Version}),
+         libgz-physics7-tpelib (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Development files
@@ -197,7 +197,7 @@ Description: Gazebo Physics classes and functions for robot apps - Development f
   .
   TPE library component, development files
 
-Package: libgz-physics6-tpelib
+Package: libgz-physics7-tpelib
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
@@ -209,12 +209,12 @@ Description: Gazebo Physics classes and functions for robot apps - TPE library
   .
   TPE library component shared library
 
-Package: libgz-physics6-bullet-dev
+Package: libgz-physics7-bullet-dev
 Architecture: any
 Section: libdevel
-Depends: libgz-physics6-core-dev (= ${binary:Version}),
-         libgz-physics6-sdf-dev (= ${binary:Version}),
-         libgz-physics6-mesh-dev (= ${binary:Version}),
+Depends: libgz-physics7-core-dev (= ${binary:Version}),
+         libgz-physics7-sdf-dev (= ${binary:Version}),
+         libgz-physics7-mesh-dev (= ${binary:Version}),
          libgz-cmake3-dev,
          libgz-common5-geospatial-dev,
          libgz-common5-graphics-dev,
@@ -222,8 +222,8 @@ Depends: libgz-physics6-core-dev (= ${binary:Version}),
          libgz-math7-eigen3-dev,
          libgz-plugin2-dev,
          libbullet-dev,
-         libsdformat13-dev,
-         libgz-physics6-bullet (= ${binary:Version}),
+         libsdformat14-dev,
+         libgz-physics7-bullet (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Development files
@@ -232,7 +232,7 @@ Description: Gazebo Physics classes and functions for robot apps - Development f
   .
   Bullet component, development files
 
-Package: libgz-physics6-bullet
+Package: libgz-physics7-bullet
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
@@ -244,17 +244,17 @@ Description: Gazebo Physics classes and functions for robot apps - Bullet engine
   .
   Bullet component shared library
 
-Package: libgz-physics6-dev
+Package: libgz-physics7-dev
 Architecture: any
 Section: libdevel
-Depends: libgz-physics6-core-dev (= ${binary:Version}),
-         libgz-physics6-bullet-dev (= ${binary:Version}),
-         libgz-physics6-dartsim-dev (= ${binary:Version}),
-         libgz-physics6-heightmap-dev (= ${binary:Version}),
-         libgz-physics6-mesh-dev (= ${binary:Version}),
-         libgz-physics6-sdf-dev (= ${binary:Version}),
-         libgz-physics6-tpe-dev (= ${binary:Version}),
-         libgz-physics6-tpelib-dev (= ${binary:Version}),
+Depends: libgz-physics7-core-dev (= ${binary:Version}),
+         libgz-physics7-bullet-dev (= ${binary:Version}),
+         libgz-physics7-dartsim-dev (= ${binary:Version}),
+         libgz-physics7-heightmap-dev (= ${binary:Version}),
+         libgz-physics7-mesh-dev (= ${binary:Version}),
+         libgz-physics7-sdf-dev (= ${binary:Version}),
+         libgz-physics7-tpe-dev (= ${binary:Version}),
+         libgz-physics7-tpelib-dev (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Metapackage
@@ -263,112 +263,112 @@ Description: Gazebo Physics classes and functions for robot apps - Metapackage
   .
   Metapackage, all development files
 
-Package: libignition-physics6-core-dev
-Depends: libgz-physics6-core-dev, ${misc:Depends}
+Package: libignition-physics7-core-dev
+Depends: libgz-physics7-core-dev, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
 
-Package: libignition-physics6-sdf-dev
-Depends: libgz-physics6-sdf-dev, ${misc:Depends}
+Package: libignition-physics7-sdf-dev
+Depends: libgz-physics7-sdf-dev, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
 
-Package: libignition-physics6-mesh-dev
-Depends: libgz-physics6-mesh-dev, ${misc:Depends}
+Package: libignition-physics7-mesh-dev
+Depends: libgz-physics7-mesh-dev, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
 
-Package: libignition-physics6-heightmap-dev
-Depends: libgz-physics6-heightmap-dev, ${misc:Depends}
+Package: libignition-physics7-heightmap-dev
+Depends: libgz-physics7-heightmap-dev, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
 
-Package: libignition-physics6
-Depends: libgz-physics6, ${misc:Depends}
+Package: libignition-physics7
+Depends: libgz-physics7, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
 
-Package: libignition-physics6-dartsim-dev
-Depends: libgz-physics6-dartsim-dev, ${misc:Depends}
+Package: libignition-physics7-dartsim-dev
+Depends: libgz-physics7-dartsim-dev, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
 
-Package: libignition-physics6-dartsim
-Depends: libgz-physics6-dartsim, ${misc:Depends}
+Package: libignition-physics7-dartsim
+Depends: libgz-physics7-dartsim, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
 
-Package: libignition-physics6-tpe-dev
-Depends: libgz-physics6-tpe-dev, ${misc:Depends}
+Package: libignition-physics7-tpe-dev
+Depends: libgz-physics7-tpe-dev, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
 
-Package: libignition-physics6-tpe
-Depends: libgz-physics6-tpe, ${misc:Depends}
+Package: libignition-physics7-tpe
+Depends: libgz-physics7-tpe, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
 
-Package: libignition-physics6-tpelib-dev
-Depends: libgz-physics6-tpelib-dev, ${misc:Depends}
+Package: libignition-physics7-tpelib-dev
+Depends: libgz-physics7-tpelib-dev, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
 
-Package: libignition-physics6-tpelib
-Depends: libgz-physics6-tpelib, ${misc:Depends}
+Package: libignition-physics7-tpelib
+Depends: libgz-physics7-tpelib, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
 
-Package: libignition-physics6-bullet-dev
-Depends: libgz-physics6-bullet-dev, ${misc:Depends}
+Package: libignition-physics7-bullet-dev
+Depends: libgz-physics7-bullet-dev, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
 
-Package: libignition-physics6-bullet
-Depends: libgz-physics6-bullet, ${misc:Depends}
+Package: libignition-physics7-bullet
+Depends: libgz-physics7-bullet, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
 
-Package: libignition-physics6-dev
-Depends: libgz-physics6-dev, ${misc:Depends}
+Package: libignition-physics7-dev
+Depends: libgz-physics7-dev, ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
