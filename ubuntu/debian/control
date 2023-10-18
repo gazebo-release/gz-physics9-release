@@ -1,4 +1,4 @@
-Source: gz-physics7
+Source: gz-physics8
 Maintainer: Jose Luis Rivero <jrivero@osrfoundation.org>
 Section: science
 Priority: optional
@@ -6,15 +6,15 @@ Build-Depends: cmake,
                pkg-config,
                debhelper (>= 13),
                libbullet-dev,
-               libgz-cmake3-dev,
-               libgz-common5-geospatial-dev,
-               libgz-common5-graphics-dev,
-               libgz-common5-profiler-dev,
-               libgz-math7-dev,
-               libgz-math7-eigen3-dev,
-               libgz-plugin2-dev,
-               libgz-utils2-dev,
-               libgz-utils2-cli-dev,
+               libgz-cmake4-dev,
+               libgz-common6-geospatial-dev,
+               libgz-common6-graphics-dev,
+               libgz-common6-profiler-dev,
+               libgz-math8-dev,
+               libgz-math8-eigen3-dev,
+               libgz-plugin3-dev,
+               libgz-utils3-dev,
+               libgz-utils3-cli-dev,
 # DART from packages.o.o repositories
                libdart6.13-dev,
                libdart6.13-collision-bullet-dev,
@@ -24,103 +24,103 @@ Build-Depends: cmake,
                libdart6.13-external-odelcpsolver-dev,
                libdart6.13-utils-dev,
                libdart6.13-utils-urdf-dev,
-               libsdformat14-dev
+               libsdformat15-dev
 Vcs-Browser: https://github.com/gazebosim/gz-physics
-Vcs-Git: https://github.com/gazebo-release/gz-physics7-release
+Vcs-Git: https://github.com/gazebo-release/gz-physics8-release
 Standards-Version: 4.5.1
 Homepage: http://gazebosim.org/
 
-Package: libgz-physics7-core-dev
+Package: libgz-physics8-core-dev
 Architecture: any
 Section: libdevel
-Depends: libgz-cmake3-dev,
-         libgz-math7-dev,
-         libgz-plugin2-dev,
-         libgz-physics7 (= ${binary:Version}),
-         libgz-utils2-dev,
+Depends: libgz-cmake4-dev,
+         libgz-math8-dev,
+         libgz-plugin3-dev,
+         libgz-physics8 (= ${binary:Version}),
+         libgz-utils3-dev,
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Development files
-  Gazebo Physics is a component in the Gazebo framework, a set of libraries
-  designed to rapidly develop robot applications.
-  .
-  Core component, development files
+ Gazebo Physics is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ Core component, development files
 
-Package: libgz-physics7-sdf-dev
+Package: libgz-physics8-sdf-dev
 Architecture: any
 Section: libdevel
-Depends: libgz-physics7-core-dev (= ${binary:Version}),
-         libgz-cmake3-dev,
-         libsdformat14-dev,
-         libgz-physics7 (= ${binary:Version}),
+Depends: libgz-physics8-core-dev (= ${binary:Version}),
+         libgz-cmake4-dev,
+         libsdformat15-dev,
+         libgz-physics8 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - SDF Dev files
-  Gazebo Physics is a component in the Gazebo framework, a set of libraries
-  designed to rapidly develop robot applications.
-  .
-  SDF component, development files
+ Gazebo Physics is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ SDF component, development files
 
-Package: libgz-physics7-mesh-dev
+Package: libgz-physics8-mesh-dev
 Architecture: any
 Section: libdevel
-Depends: libgz-physics7-core-dev (= ${binary:Version}),
-         libgz-cmake3-dev,
-         libgz-common5-geospatial-dev,
-         libgz-common5-graphics-dev,
-         libgz-physics7 (= ${binary:Version}),
+Depends: libgz-physics8-core-dev (= ${binary:Version}),
+         libgz-cmake4-dev,
+         libgz-common6-geospatial-dev,
+         libgz-common6-graphics-dev,
+         libgz-physics8 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Mesh Dev files
-  Gazebo Physics is a component in the Gazebo framework, a set of libraries
-  designed to rapidly develop robot applications.
-  .
-  Mesh component, development files
+ Gazebo Physics is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ Mesh component, development files
 
-Package: libgz-physics7-heightmap-dev
+Package: libgz-physics8-heightmap-dev
 Architecture: any
 Section: libdevel
-Depends: libgz-physics7-core-dev (= ${binary:Version}),
-         libgz-cmake3-dev,
-         libgz-common5-geospatial-dev,
-         libgz-common5-graphics-dev,
-         libgz-physics7 (= ${binary:Version}),
+Depends: libgz-physics8-core-dev (= ${binary:Version}),
+         libgz-cmake4-dev,
+         libgz-common6-geospatial-dev,
+         libgz-common6-graphics-dev,
+         libgz-physics8 (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Heightmap Dev files
-  Gazebo Physics is a component in the Gazebo framework, a set of libraries
-  designed to rapidly develop robot applications.
-  .
-  Heightmap component, development files
+ Gazebo Physics is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ Heightmap component, development files
 
-Package: libgz-physics7
+Package: libgz-physics8
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Shared library
-  Gazebo Physics is a component in the Gazebo framework, a set of libraries
-  designed to rapidly develop robot applications.
-  .
-  Main shared library
+ Gazebo Physics is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ Main shared library
 
-Package: libgz-physics7-dartsim-dev
+Package: libgz-physics8-dartsim-dev
 Architecture: any
 Section: libdevel
-Depends: libgz-physics7-core-dev (= ${binary:Version}),
-         libgz-physics7-sdf-dev (= ${binary:Version}),
-         libgz-physics7-mesh-dev (= ${binary:Version}),
-         libgz-physics7-heightmap-dev (= ${binary:Version}),
-         libgz-cmake3-dev,
-         libgz-common5-geospatial-dev,
-         libgz-common5-graphics-dev,
-         libgz-math7-dev,
-         libgz-math7-eigen3-dev,
-         libgz-common5-dev,
-         libgz-plugin2-dev,
-         libsdformat14-dev,
-         libgz-physics7-dartsim (= ${binary:Version}),
+Depends: libgz-physics8-core-dev (= ${binary:Version}),
+         libgz-physics8-sdf-dev (= ${binary:Version}),
+         libgz-physics8-mesh-dev (= ${binary:Version}),
+         libgz-physics8-heightmap-dev (= ${binary:Version}),
+         libgz-cmake4-dev,
+         libgz-common6-geospatial-dev,
+         libgz-common6-graphics-dev,
+         libgz-math8-dev,
+         libgz-math8-eigen3-dev,
+         libgz-common6-dev,
+         libgz-plugin3-dev,
+         libsdformat15-dev,
+         libgz-physics8-dartsim (= ${binary:Version}),
          ${misc:Depends}
 # There is no public header that includes DART upstream headers in gz-physics-dartsim
 # so dependencies are in Suggests.
@@ -137,133 +137,133 @@ Suggests: libdart-dev (>= 6.12.1+dfsg4) | libdart6.13-dev,
          libdart-collision-bullet-dev (>= 6.12.1+dfsg4) | libdart6.13-collision-bullet-dev
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Development files
-  Gazebo Physics is a component in the Gazebo framework, a set of libraries
-  designed to rapidly develop robot applications.
-  .
-  Dartsim component, development files
+ Gazebo Physics is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ Dartsim component, development files
 
-Package: libgz-physics7-dartsim
+Package: libgz-physics8-dartsim
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Dartsim library
-  Gazebo Physics is a component in the Gazebo framework, a set of libraries
-  designed to rapidly develop robot applications.
-  .
-  DARTSim component shared library
+ Gazebo Physics is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ DARTSim component shared library
 
-Package: libgz-physics7-tpe-dev
+Package: libgz-physics8-tpe-dev
 Architecture: any
 Section: libdevel
-Depends: libgz-physics7-core-dev (= ${binary:Version}),
-         libgz-physics7-sdf-dev (= ${binary:Version}),
-         libgz-physics7-mesh-dev (= ${binary:Version}),
-         libgz-cmake3-dev,
-         libgz-math7-dev,
-         libgz-math7-eigen3-dev,
-         libgz-plugin2-dev,
-         libsdformat14-dev,
-         libgz-physics7-tpe (= ${binary:Version}),
+Depends: libgz-physics8-core-dev (= ${binary:Version}),
+         libgz-physics8-sdf-dev (= ${binary:Version}),
+         libgz-physics8-mesh-dev (= ${binary:Version}),
+         libgz-cmake4-dev,
+         libgz-math8-dev,
+         libgz-math8-eigen3-dev,
+         libgz-plugin3-dev,
+         libsdformat15-dev,
+         libgz-physics8-tpe (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Development files
-  Gazebo Physics is a component in the Gazebo framework, a set of libraries
-  designed to rapidly develop robot applications.
-  .
-  TPE plugin component, development files
+ Gazebo Physics is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ TPE plugin component, development files
 
-Package: libgz-physics7-tpe
+Package: libgz-physics8-tpe
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - TPE library
-  Gazebo Physics is a component in the Gazebo framework, a set of libraries
-  designed to rapidly develop robot applications.
-  .
-  TPE plugin component shared library
+ Gazebo Physics is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ TPE plugin component shared library
 
-Package: libgz-physics7-tpelib-dev
+Package: libgz-physics8-tpelib-dev
 Architecture: any
 Section: libdevel
-Depends: libgz-cmake3-dev,
-         libgz-math7-dev,
-         libgz-math7-eigen3-dev,
-         libgz-plugin2-dev,
-         libgz-physics7-tpelib (= ${binary:Version}),
+Depends: libgz-cmake4-dev,
+         libgz-math8-dev,
+         libgz-math8-eigen3-dev,
+         libgz-plugin3-dev,
+         libgz-physics8-tpelib (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Development files
-  Gazebo Physics is a component in the Gazebo framework, a set of libraries
-  designed to rapidly develop robot applications.
-  .
-  TPE library component, development files
+ Gazebo Physics is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ TPE library component, development files
 
-Package: libgz-physics7-tpelib
+Package: libgz-physics8-tpelib
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - TPE library
-  Gazebo Physics is a component in the Gazebo framework, a set of libraries
-  designed to rapidly develop robot applications.
-  .
-  TPE library component shared library
+ Gazebo Physics is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ TPE library component shared library
 
-Package: libgz-physics7-bullet-dev
+Package: libgz-physics8-bullet-dev
 Architecture: any
 Section: libdevel
-Depends: libgz-physics7-core-dev (= ${binary:Version}),
-         libgz-physics7-sdf-dev (= ${binary:Version}),
-         libgz-physics7-mesh-dev (= ${binary:Version}),
-         libgz-cmake3-dev,
-         libgz-common5-geospatial-dev,
-         libgz-common5-graphics-dev,
-         libgz-math7-dev,
-         libgz-math7-eigen3-dev,
-         libgz-plugin2-dev,
+Depends: libgz-physics8-core-dev (= ${binary:Version}),
+         libgz-physics8-sdf-dev (= ${binary:Version}),
+         libgz-physics8-mesh-dev (= ${binary:Version}),
+         libgz-cmake4-dev,
+         libgz-common6-geospatial-dev,
+         libgz-common6-graphics-dev,
+         libgz-math8-dev,
+         libgz-math8-eigen3-dev,
+         libgz-plugin3-dev,
          libbullet-dev,
-         libsdformat14-dev,
-         libgz-physics7-bullet (= ${binary:Version}),
+         libsdformat15-dev,
+         libgz-physics8-bullet (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Development files
-  Gazebo Physics is a component in the Gazebo framework, a set of libraries
-  designed to rapidly develop robot applications.
-  .
-  Bullet component, development files
+ Gazebo Physics is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ Bullet component, development files
 
-Package: libgz-physics7-bullet
+Package: libgz-physics8-bullet
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Bullet engine
-  Gazebo Physics is a component in the Gazebo framework, a set of libraries
-  designed to rapidly develop robot applications.
-  .
-  Bullet component shared library
+ Gazebo Physics is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ Bullet component shared library
 
-Package: libgz-physics7-dev
+Package: libgz-physics8-dev
 Architecture: any
 Section: libdevel
-Depends: libgz-physics7-core-dev (= ${binary:Version}),
-         libgz-physics7-bullet-dev (= ${binary:Version}),
-         libgz-physics7-dartsim-dev (= ${binary:Version}),
-         libgz-physics7-heightmap-dev (= ${binary:Version}),
-         libgz-physics7-mesh-dev (= ${binary:Version}),
-         libgz-physics7-sdf-dev (= ${binary:Version}),
-         libgz-physics7-tpe-dev (= ${binary:Version}),
-         libgz-physics7-tpelib-dev (= ${binary:Version}),
+Depends: libgz-physics8-core-dev (= ${binary:Version}),
+         libgz-physics8-bullet-dev (= ${binary:Version}),
+         libgz-physics8-dartsim-dev (= ${binary:Version}),
+         libgz-physics8-heightmap-dev (= ${binary:Version}),
+         libgz-physics8-mesh-dev (= ${binary:Version}),
+         libgz-physics8-sdf-dev (= ${binary:Version}),
+         libgz-physics8-tpe-dev (= ${binary:Version}),
+         libgz-physics8-tpelib-dev (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Metapackage
-  Gazebo Physics is a component in the Gazebo framework, a set of libraries
-  designed to rapidly develop robot applications.
-  .
-  Metapackage, all development files
+ Gazebo Physics is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ Metapackage, all development files
