@@ -1,1 +1,2 @@
 usr/lib/*/cmake/*-physics[0-99]-all/*-physics[0-99]-all*
+usr/share/gz/*/*.tag.xml

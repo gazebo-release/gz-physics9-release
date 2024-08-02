@@ -5,6 +5,7 @@ Priority: optional
 Build-Depends: cmake,
                pkg-config,
                debhelper (>= 13),
+               doxygen,
                libbullet-dev,
                libgz-cmake4-dev,
                libgz-common6-geospatial-dev,
