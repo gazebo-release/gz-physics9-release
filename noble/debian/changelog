@@ -1,3 +1,9 @@
+gz-physics8 (8.0.0~pre1-1~noble) noble; urgency=medium
+
+  * gz-physics8 8.0.0~pre1-1 release
+
+ -- Ian Chen <ichen@openrobotics.org>  Wed, 28 Aug 2024 04:45:18 +0000
+
 gz-physics8 (7.999.999-1~noble) noble; urgency=medium
 
   * First release for noble
