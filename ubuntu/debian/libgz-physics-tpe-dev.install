@@ -1,7 +1,7 @@
 usr/include/*/physics*/*/physics/tpe-plugin/*
-usr/lib/*/cmake/*-physics[0-99]-tpe-plugin/*
-usr/lib/*/cmake/*-physics[0-99]-tpe/*
-usr/lib/*/lib*-physics[0-99]-tpe-plugin.so
+usr/lib/*/cmake/*-physics-tpe-plugin/*
+usr/lib/*/cmake/*-physics-tpe/*
+usr/lib/*/lib*-physics-tpe-plugin.so
 usr/lib/*/*-physics-[0-99]/engine-plugins/lib*-physics*-tpe-plugin.so
-usr/lib/*/pkgconfig/*-physics[0-99]-tpe-plugin.pc
-usr/lib/*/pkgconfig/*-physics[0-99]-tpe.pc
+usr/lib/*/pkgconfig/*-physics-tpe-plugin.pc
+usr/lib/*/pkgconfig/*-physics-tpe.pc
