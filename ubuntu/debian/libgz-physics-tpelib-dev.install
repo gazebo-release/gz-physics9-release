@@ -1,4 +1,4 @@
 usr/include/*/physics*/*/physics/tpelib/*
-usr/lib/*/cmake/*-physics[0-99]-tpelib/*
-usr/lib/*/lib*-physics[0-99]-tpelib.so
-usr/lib/*/pkgconfig/*-physics[0-99]-tpelib.pc
+usr/lib/*/cmake/*-physics-tpelib/*
+usr/lib/*/lib*-physics-tpelib.so
+usr/lib/*/pkgconfig/*-physics-tpelib.pc
