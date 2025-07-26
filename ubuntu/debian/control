@@ -269,3 +269,19 @@ Description: Gazebo Physics classes and functions for robot apps - Metapackage
  designed to rapidly develop robot applications.
  .
  Metapackage, all development files
+
+Package: gz-jetty-physics
+Depends: libgz-physics9-dev (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Jetty without exposing the version number.
+
+Package: gz-jetty-physics-core
+Depends: libgz-physics9-core-dev (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Jetty without exposing the version number.
