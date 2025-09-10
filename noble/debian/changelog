@@ -1,3 +1,9 @@
+gz-physics9 (9.0.0~pre2-1~noble) noble; urgency=medium
+
+  * gz-physics9 9.0.0~pre2-1 release
+
+ -- Steve Peters <scpeters@openrobotics.org>  Wed, 10 Sep 2025 20:21:07 +0000
+
 gz-physics9 (9.0.0~pre1-1~noble) noble; urgency=medium
 
   * gz-physics9 9.0.0~pre1-1 release
