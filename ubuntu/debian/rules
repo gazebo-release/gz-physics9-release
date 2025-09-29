@@ -10,7 +10,8 @@ LDFLAGS:=$(filter-out -flto=auto -ffat-lto-objects -flto=auto -ffat-lto-objects,
 
 override_dh_auto_configure:
 	dh_auto_configure -- \
-	    -DCMAKE_BUILD_TYPE=RelWithDebInfo
+		-DCMAKE_BUILD_TYPE=RelWithDebInfo \
+		-DSKIP_dartsim=true
 
 # test cannot run in parallel
 # arm64 problems https://github.com/gazebosim/gz-physics/issues/70
