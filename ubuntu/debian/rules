@@ -9,9 +9,14 @@ LDFLAGS:=$(filter-out -flto=auto -ffat-lto-objects -flto=auto -ffat-lto-objects,
 	dh $@ --no-parallel
 
 override_dh_auto_configure:
+# Skip dartsim on armhf due to lack of support for 32bits in dart upstream
+ifeq ($(DEB_HOST_ARCH),armhf)
 	dh_auto_configure -- \
-		-DCMAKE_BUILD_TYPE=RelWithDebInfo \
-		-DSKIP_dartsim=true
+		-DCMAKE_BUILD_TYPE=RelWithDebInfo -DSKIP_dartsim=true
+else
+	dh_auto_configure -- \
+	-DCMAKE_BUILD_TYPE=RelWithDebInfo
+endif
 
 # test cannot run in parallel
 # arm64 problems https://github.com/gazebosim/gz-physics/issues/70
