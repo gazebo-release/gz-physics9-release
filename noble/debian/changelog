@@ -1,3 +1,9 @@
+gz-physics9 (9.0.0-4~noble) noble; urgency=medium
+
+  * gz-physics9 9.0.0-4 release
+
+ -- Jose Luis Rivero <jrivero@osrfoundation.org>  Fri, 14 Nov 2025 13:19:41 +0100
+
 gz-physics9 (9.0.0-3~noble) noble; urgency=medium
 
   * gz-physics9 9.0.0-3 release
