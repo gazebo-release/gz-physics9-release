@@ -18,14 +18,14 @@ Build-Depends: cmake,
                libgz-utils4-dev,
                libgz-utils4-cli-dev,
 # DART from packages.o.o repositories - mandatory on all architectures except armhf
-               libdart6.13-dev [!armhf],
-               libdart6.13-collision-bullet-dev [!armhf],
-               libdart6.13-collision-ode-dev [!armhf],
-               libdart6.13-external-convhull-3d-dev [!armhf],
-               libdart6.13-external-ikfast-dev [!armhf],
-               libdart6.13-external-odelcpsolver-dev [!armhf],
-               libdart6.13-utils-dev [!armhf],
-               libdart6.13-utils-urdf-dev [!armhf],
+               libdart6.16-dev [!armhf],
+               libdart6.16-collision-bullet-dev [!armhf],
+               libdart6.16-collision-ode-dev [!armhf],
+               libdart6.16-external-convhull-3d-dev [!armhf],
+               libdart6.16-external-ikfast-dev [!armhf],
+               libdart6.16-external-odelcpsolver-dev [!armhf],
+               libdart6.16-utils-dev [!armhf],
+               libdart6.16-utils-urdf-dev [!armhf],
                libsdformat16-dev
 Vcs-Browser: https://github.com/gazebosim/gz-physics
 Vcs-Git: https://github.com/gazebo-release/gz-physics9-release
@@ -127,16 +127,16 @@ Depends: libgz-physics9-core-dev (= ${binary:Version}),
 # There is no public header that includes DART upstream headers in gz-physics-dartsim
 # so dependencies are in Suggests.
 # DART 6.12 from Ubuntu repositories is listed first so it avoids conflict on the
-# platform and 6.13 the one used by the gz-physics-dartsim-plugin is also possible
+# platform and 6.16 the one used by the gz-physics-dartsim-plugin is also possible
 # See https://github.com/gazebosim/gz-physics/issues/541
-Suggests: libdart-dev (>= 6.12.1+dfsg4) | libdart6.13-dev,
-         libdart-external-convhull-3d-dev (>= 6.12.1+dfsg4) | libdart6.13-external-convhull-3d-dev,
-         libdart-collision-ode-dev (>= 6.12.1+dfsg4) | libdart6.13-collision-ode-dev,
-         libdart-utils-urdf-dev (>= 6.12.1+dfsg4) | libdart6.13-utils-urdf-dev,
-         libdart-utils-dev (>= 6.12.1+dfsg4) | libdart6.13-utils-dev,
-         libdart-external-odelcpsolver-dev (>= 6.12.1+dfsg4) | libdart6.13-external-odelcpsolver-dev,
-         libdart-external-ikfast-dev (>= 6.12.1+dfsg4) | libdart6.13-external-ikfast-dev,
-         libdart-collision-bullet-dev (>= 6.12.1+dfsg4) | libdart6.13-collision-bullet-dev
+Suggests: libdart-dev (>= 6.12.1+dfsg4) | libdart6.16-dev,
+         libdart-external-convhull-3d-dev (>= 6.12.1+dfsg4) | libdart6.16-external-convhull-3d-dev,
+         libdart-collision-ode-dev (>= 6.12.1+dfsg4) | libdart6.16-collision-ode-dev,
+         libdart-utils-urdf-dev (>= 6.12.1+dfsg4) | libdart6.16-utils-urdf-dev,
+         libdart-utils-dev (>= 6.12.1+dfsg4) | libdart6.16-utils-dev,
+         libdart-external-odelcpsolver-dev (>= 6.12.1+dfsg4) | libdart6.16-external-odelcpsolver-dev,
+         libdart-external-ikfast-dev (>= 6.12.1+dfsg4) | libdart6.16-external-ikfast-dev,
+         libdart-collision-bullet-dev (>= 6.12.1+dfsg4) | libdart6.16-collision-bullet-dev
 Multi-Arch: same
 Description: Gazebo Physics classes and functions for robot apps - Development files
  Gazebo Physics is a component in the Gazebo framework, a set of libraries
