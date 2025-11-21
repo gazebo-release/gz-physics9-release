@@ -150,6 +150,8 @@ Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
+Breaks: libgz-physics9-dartsim-dev (<< 9.0.0-2)
+Replaces: libgz-physics9-dartsim-dev (<< 9.0.0-2)
 Description: Gazebo Physics classes and functions for robot apps - Dartsim library
  Gazebo Physics is a component in the Gazebo framework, a set of libraries
  designed to rapidly develop robot applications.
@@ -182,6 +184,8 @@ Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
+Breaks: libgz-physics9-tpe-dev (<< 9.0.0-2)
+Replaces: libgz-physics9-tpe-dev (<< 9.0.0-2)
 Description: Gazebo Physics classes and functions for robot apps - TPE library
  Gazebo Physics is a component in the Gazebo framework, a set of libraries
  designed to rapidly develop robot applications.
@@ -210,6 +214,8 @@ Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
+Breaks: libgz-physics9-tpelib-dev (<< 9.0.0-2)
+Replaces: libgz-physics9-typelib-dev (<< 9.0.0-2)
 Description: Gazebo Physics classes and functions for robot apps - TPE library
  Gazebo Physics is a component in the Gazebo framework, a set of libraries
  designed to rapidly develop robot applications.
@@ -245,6 +251,8 @@ Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
+Breaks: libgz-physics9-bullet-dev (<< 9.0.0-2)
+Replaces: libgz-physics9-bullet-dev (<< 9.0.0-2)
 Description: Gazebo Physics classes and functions for robot apps - Bullet engine
  Gazebo Physics is a component in the Gazebo framework, a set of libraries
  designed to rapidly develop robot applications.
