@@ -1,3 +1,9 @@
+gz-physics9 (9.1.0-1~noble) noble; urgency=medium
+
+  * gz-physics9 9.1.0-1 release
+
+ -- Ian Chen <ichen@openrobotics.org>  Wed, 21 Jan 2026 17:59:34 +0000
+
 gz-physics9 (9.0.0-7~noble) noble; urgency=medium
 
   * gz-physics9 9.0.0-7 release
