@@ -1,3 +1,10 @@
+gz-physics9 (9.1.0-2~noble) noble; urgency=medium
+
+  * gz-physics9 9.1.0-2 release
+  * Change DART to 6.16 version see https://github.com/gazebosim/gz-physics/issues/816
+
+ -- Jose Luis Rivero <jrivero@osrfoundation.org>  Mon, 02 Mar 2026 18:34:09 +0100
+
 gz-physics9 (9.1.0-1~noble) noble; urgency=medium
 
   * gz-physics9 9.1.0-1 release
