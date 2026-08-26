@@ -1,3 +1,9 @@
+gz-physics9 (9.5.0-1~noble) noble; urgency=medium
+
+  * gz-physics9 9.5.0-1 release
+
+ -- Arjo Chakravarty <arjo@intrinsic.ai>  Wed, 26 Aug 2026 08:30:55 +0000
+
 gz-physics9 (9.4.0-2~noble) noble; urgency=medium
 
   * gz-physics9 9.4.0-2 release
