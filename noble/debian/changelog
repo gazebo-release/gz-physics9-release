@@ -1,3 +1,9 @@
+gz-physics9 (9.5.2-1~noble) noble; urgency=medium
+
+  * gz-physics9 9.5.2-1 release
+
+ -- Luca Della Vedova <lucadv@intrinsic.ai>  Tue, 29 Sep 2026 14:29:10 +0800
+
 gz-physics9 (9.5.1-1~noble) noble; urgency=medium
 
   * gz-physics9 9.5.1-1 release
